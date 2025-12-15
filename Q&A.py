@@ -7,7 +7,7 @@ from langchain_core.output_parsers import StrOutputParser
 
 # --- 1. 配置 API Key 和模型 ---
 os.environ["OPENAI_API_KEY"] = "sk-9750b158612748ceb66459b5346b9291"
-DEEPSEEK_BASE_URL = "https://api.deepseek.com"  # ← 修正：移除末尾多余空格
+DEEPSEEK_BASE_URL = "https://api.deepseek.com"  
 
 llm = ChatOpenAI(
     model_name="deepseek-chat",
@@ -24,7 +24,7 @@ embeddings = HuggingFaceEmbeddings(
     encode_kwargs={"normalize_embeddings": True},
 )
 
-vectorstore_path = "/mnt/sda/home/XuYH/daqing_rag/vectorstore/faiss_tesla_manual"
+vectorstore_path = "daqing_rag/RAG_workflow/vectorstore/faiss_tesla_manual"
 print(f"正在从 {vectorstore_path} 加载向量数据库...")
 retriever = FAISS.load_local(
     vectorstore_path, 
