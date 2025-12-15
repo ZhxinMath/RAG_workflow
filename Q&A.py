@@ -6,7 +6,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 # --- 1. 配置 API Key 和模型 ---
-os.environ["OPENAI_API_KEY"] = "sk-9750b158612748ceb66459b5346b9291"
+os.environ["OPENAI_API_KEY"] = "sk-xxx"
 DEEPSEEK_BASE_URL = "https://api.deepseek.com"  
 
 llm = ChatOpenAI(
